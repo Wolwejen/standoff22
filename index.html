@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Standoff 2 GOLD</title>
+    <style>
+        /* Общий стиль */
+        body {
+            background-color: #222;
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        /* Контейнер для кнопок */
+        .container {
+            width: 300px;
+            text-align: center;
+        }
+
+        /* Кнопки */
+        .standoff-button {
+            background-color: #444;
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            margin: 10px 0;
+        }
+
+        .standoff-button:hover {
+            background-color: #555;
+        }
+
+        /* Эффект нажатия */
+        .standoff-button:active {
+            transform: scale(0.95);
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.05);
+        }
+
+        /* Счетчик голды */
+        .gold-count {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="standoff-button" onclick="addGold()">Получить 1000 голды</button>
+        <button class="standoff-button" onclick="window.location.href='https://youtube.ru.net/Ln9YKzPKtP'">Вывести</button>
+        <p class="gold-count" id="goldCount">Голды: 0</p>
+    </div>
+
+    <script>
+        function addGold() {
+            // Получаем текущий счетчик голды
+            var currentGold = parseInt(document.getElementById("goldCount").innerText.split(":")[1].trim());
+            
+            // Добавляем 1000 голды
+            currentGold += 1000;
+            
+            // Обновляем текст счетчика
+            document.getElementById("goldCount").innerText = "Голды: " + currentGold;
+        }
+    </script>
+</body>
+</html>
